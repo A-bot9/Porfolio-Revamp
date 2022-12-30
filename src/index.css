@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Roboto Slab', serif;
+}
+
+.coolLists {
+	@apply transform hover:scale-105 transition text-slate-400 hover:text-emerald-400 cursor-pointer;
+}
+
+.btn3 {
+	transform: scale(1);
+	transition: transform 0.2s ease-in;
+}
+
+.btn3 span {
+	transform: scale(1);
+	transition: transform 0.3s ease-in;
+}
+
+.btn3:hover span {
+	transform: scale(1.1, 1.2);
+}
