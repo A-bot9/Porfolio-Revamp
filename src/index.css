@@ -4,22 +4,73 @@
 
 body {
 	font-family: 'Roboto Slab', serif;
+	background-color: #0f172a;
+	overflow-x: hidden;
 }
+
+/* section {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 400px;
+	padding: 100px 20vw;
+} */
 
 .coolLists {
-	@apply transform hover:scale-105 transition text-slate-400 hover:text-emerald-400 cursor-pointer;
+	@apply transition transform cursor-pointer hover:scale-105 text-slate-400 hover:text-emerald-400;
 }
 
-.btn3 {
-	transform: scale(1);
-	transition: transform 0.2s ease-in;
+.uLstyle {
+	margin: 0.75em 0;
+	padding: 0 1rem;
+	list-style: none;
 }
 
-.btn3 span {
-	transform: scale(1);
-	transition: transform 0.3s ease-in;
+.triangleList::before {
+	content: '';
+	border-color: transparent #00df9a;
+	border-style: solid;
+	border-width: 0.35em 0 0.35em 0.45em;
+	display: block;
+	height: 0;
+	width: 0;
+	left: -1em;
+	top: 1.1em;
+	position: relative;
 }
 
-.btn3:hover span {
-	transform: scale(1.1, 1.2);
+.blue {
+	background: #3c31dd;
+}
+
+.red {
+	background: #dd3f31;
+}
+.pink {
+	background: #ff0066;
+}
+
+.dark {
+	background: #0f0f10;
+}
+
+.triangleSVG {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.triangleSVG svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 150px;
+}
+
+.triangleSVG.shape-fill {
+	fill: #0f172a;
 }

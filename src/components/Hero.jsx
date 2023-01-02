@@ -1,10 +1,13 @@
 import space from '../images/space.jpg';
 import Typed from 'react-typed';
 import { FaLinkedinIn, FaCodepen, FaGithub } from 'react-icons/fa';
+import Navbar from './Navbar';
+import Resume from '../assets/Resume.pdf';
 
 const Hero = () => {
 	return (
-		<div className="relative top-0 bg-gray-800">
+		<div className="relative top-0 h-screen bg-gray-800">
+			<Navbar />
 			<div className="absolute inset-x-0 ">
 				<svg viewBox="0 0 1000 320">
 					<path
@@ -14,12 +17,13 @@ const Hero = () => {
 					></path>
 				</svg>
 			</div>
+
 			<div className="px-4 py-32 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-40">
 				<div className="relative max-w-2xl text-center sm:mx-auto sm:max-w-xl md:max-w-2xl">
 					<h2 className="mb-6 tracking-wide text-md md:text-2xl text-emerald-400 sm:leading-none">
 						Hi, my name is
 					</h2>
-					<h2 className="mb-6 text-4xl font-bold tracking-wide md:text-5xl text-slate-300 lg:text-7xl sm:leading-none">
+					<h2 className="mb-6 text-4xl font-bold tracking-wide md:text-5xl text-slate-300 lg:text-8xl sm:leading-none">
 						Adrian Leal.
 					</h2>
 					<p className="mb-6 text-xl text-slate-500 md:text-3xl lg:text-5xl">
@@ -55,15 +59,37 @@ const Hero = () => {
 							</a>
 						</li>
 					</ul>
+					<div>
+						<a
+							href={Resume}
+							target="_blank"
+							rel="noreferrer"
+							className="relative inline-flex items-center justify-start inline-block p-2 px-2 m-3 overflow-hidden font-bold rounded-md group md:hidden"
+						>
+							<span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-slate-200 opacity-[3%]"></span>
+							<span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+							<span className="relative w-full text-left transition-colors duration-200 ease-in-out text-slate-200 group-hover:text-gray-900">
+								Resume
+							</span>
+							<span className="absolute inset-0 border-2 rounded-md border-slate-200"></span>
+						</a>
+					</div>
 				</div>
 			</div>
-			<svg viewBox="0 0 1440 320">
-				<path
+
+			<div class="triangleSVG">
+				<svg
+					data-name="Layer 1"
 					fill="#0f172a"
-					fill-opacity="1"
-					d="M0,192L18.5,197.3C36.9,203,74,213,111,181.3C147.7,149,185,75,222,80C258.5,85,295,171,332,202.7C369.2,235,406,213,443,181.3C480,149,517,107,554,85.3C590.8,64,628,64,665,74.7C701.5,85,738,107,775,128C812.3,149,849,171,886,160C923.1,149,960,107,997,85.3C1033.8,64,1071,64,1108,58.7C1144.6,53,1182,43,1218,53.3C1255.4,64,1292,96,1329,138.7C1366.2,181,1403,235,1422,261.3L1440,288L1440,0L1421.5,0C1403.1,0,1366,0,1329,0C1292.3,0,1255,0,1218,0C1181.5,0,1145,0,1108,0C1070.8,0,1034,0,997,0C960,0,923,0,886,0C849.2,0,812,0,775,0C738.5,0,702,0,665,0C627.7,0,591,0,554,0C516.9,0,480,0,443,0C406.2,0,369,0,332,0C295.4,0,258,0,222,0C184.6,0,148,0,111,0C73.8,0,37,0,18,0L0,0Z"
-				></path>
-			</svg>
+					viewBox="0 0 1200 120"
+					preserveAspectRatio="none"
+				>
+					<path
+						d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z"
+						class="shape-fill"
+					></path>
+				</svg>
+			</div>
 		</div>
 	);
 };
