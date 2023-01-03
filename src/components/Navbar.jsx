@@ -22,11 +22,6 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li className="px-2 lg:text-xl coolLists">
-							<Link to="experience" smooth={true} duration={500}>
-								Experience
-							</Link>
-						</li>
-						<li className="px-2 lg:text-xl coolLists">
 							<Link to="projects" smooth={true} duration={500}>
 								Projects
 							</Link>
