@@ -2,7 +2,7 @@ import bitmoji from '../images/bitmoji.jpg';
 
 const About = () => {
 	return (
-		<div className="px-4 py-32 m-2 mx-auto bg-gray-800 rounded-full sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-40 ">
+		<div className="px-4 py-32 m-10 mx-auto bg-gray-800 rounded-full sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-40 ">
 			<div className=" bg-slate-900">
 				<section className="container grid grid-cols-1 mx-auto border rounded-md md:grid-cols-2">
 					<div className="container p-2 border-2">
