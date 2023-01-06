@@ -4,14 +4,14 @@ import { ImFire } from 'react-icons/im';
 
 const Projects = () => {
 	return (
-		<section id="projects" className="my-8 text-gray-400 bg-gray-900 body-font">
+		<section id="projects" className="my-8 text-gray-400 bg-slate-900 body-font">
 			<div className="container px-5 py-10 mx-auto text-center lg:px-40">
 				<div className="flex flex-col w-full mb-20">
-					<ImFire className="inline-block w-10 h-10 mx-auto mb-4" />
-					<h1 className="mb-4 text-3xl font-medium text-white sm:text-4xl title-font">
+					<ImFire className="inline-block w-10 h-10 mx-auto mb-4 text-emerald-400" />
+					<h1 className="mb-4 text-3xl sm:text-4xl title-font text-slate-300 font-bold underline decoration-slate-600 transition hover:text-[#00df9a] cursor-pointer">
 						Fire Apps I've Built
 					</h1>
-					<p className="mx-auto text-base leading-relaxed lg:w-2/3">
+					<p className="mx-auto text-base leading-relaxed text-white lg:w-2/3">
 						PRACTICE MAKES IMPROVEMENT...
 					</p>
 				</div>
@@ -43,7 +43,7 @@ const Projects = () => {
 			<div class="curve">
 				<svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
 					<path
-						fill="#111827"
+						fill="#1f2937"
 						d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
 						class="shape-fill"
 					></path>
