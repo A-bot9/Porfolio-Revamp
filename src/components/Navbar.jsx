@@ -71,11 +71,7 @@ const Navbar = () => {
 							About
 						</Link>
 					</li>
-					<li className="p-4 border-b border-slate-600 coolLists">
-						<Link onClick={handleToggle} to="experience" smooth={true} duration={500}>
-							Experience
-						</Link>
-					</li>
+
 					<li className="p-4 border-b border-slate-600 coolLists">
 						<Link onClick={handleToggle} to="projects" smooth={true} duration={500}>
 							Projects
