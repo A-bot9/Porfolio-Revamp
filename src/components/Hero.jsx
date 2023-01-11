@@ -1,4 +1,5 @@
-import space from '../images/space.jpg';
+// import { useState } from 'react';
+import { useSpring, animated } from 'react-spring';
 import Typed from 'react-typed';
 import { FaLinkedinIn, FaCodepen, FaGithub } from 'react-icons/fa';
 import Navbar from './Navbar';
@@ -6,6 +7,14 @@ import Resume from '../assets/Resume.pdf';
 import { ScrollToTop } from './scroll/ScrollToTop';
 
 const Hero = () => {
+	const [props, api] = useSpring(
+		() => ({
+			from: { opacity: 0 },
+			to: { opacity: 1 },
+		}),
+		[]
+	);
+
 	return (
 		<>
 			<div className="relative top-0 h-screen bg-gray-800">
@@ -21,10 +30,13 @@ const Hero = () => {
 				</div>
 
 				<div className="px-4 py-32 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-40">
-					<div className="relative max-w-2xl text-center sm:mx-auto sm:max-w-xl md:max-w-2xl">
-						<h2 className="mb-6 tracking-wide text-md md:text-2xl text-emerald-400 sm:leading-none">
+					<div className="relative max-w-2xl text-center sm:mx-auto sm:max-w-xl md:max-w-2xl ">
+						<animated.h2
+							style={props}
+							className="mb-6 tracking-wide text-md md:text-2xl text-emerald-400 sm:leading-none"
+						>
 							Hi, my name is
-						</h2>
+						</animated.h2>
 						<h2 className="mb-6 text-4xl font-bold tracking-wide md:text-5xl text-slate-300 lg:text-8xl sm:leading-none">
 							Adrian Leal.
 						</h2>
