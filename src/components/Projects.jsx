@@ -4,7 +4,7 @@ import { ImFire } from 'react-icons/im';
 
 const Projects = () => {
 	return (
-		<section id="projects" className="my-8 text-gray-400 bg-slate-900 body-font">
+		<section name="projects" className="my-8 text-gray-400 bg-slate-900 body-font">
 			<div className="container px-5 py-10 mx-auto text-center lg:px-40">
 				<div className="flex flex-col w-full mb-20">
 					<ImFire className="inline-block w-10 h-10 mx-auto mb-4 text-emerald-400" />
