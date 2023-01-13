@@ -8,7 +8,7 @@ function App() {
 	//   after two seconds (about how long it takes for the data to load)
 	//   the loaded state will become true
 	useEffect(() => {
-		let timer = setTimeout(() => setpreLoaded(true), 10000);
+		let timer = setTimeout(() => setpreLoaded(true), 3000);
 		return () => {
 			clearTimeout(timer);
 		};

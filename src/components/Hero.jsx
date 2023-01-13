@@ -1,5 +1,6 @@
 // import { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useInView, animated } from '@react-spring/web';
+
 import Typed from 'react-typed';
 import { FaLinkedinIn, FaCodepen, FaGithub } from 'react-icons/fa';
 import Navbar from './Navbar';
@@ -7,12 +8,26 @@ import Resume from '../assets/Resume.pdf';
 import { ScrollToTop } from './scroll/ScrollToTop';
 
 const Hero = () => {
-	const [props, api] = useSpring(
+	// const props = useSpring({
+	// 	from: { transform: 'translateY(0%)' },
+	// 	to: [{ transform: 'translateY(50%)' }, { transform: 'translateY(0%)' }],
+	// 	config: { duration: '1000' },
+	// });
+
+	const [ref, springs] = useInView(
 		() => ({
-			from: { opacity: 0 },
-			to: { opacity: 1 },
+			from: {
+				opacity: 0,
+				y: 100,
+			},
+			to: {
+				opacity: 1,
+				y: 0,
+			},
 		}),
-		[]
+		{
+			rootMargin: '-40% 0%',
+		}
 	);
 
 	return (
@@ -29,14 +44,15 @@ const Hero = () => {
 					</svg>
 				</div>
 
-				<div className="px-4 py-32 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-40">
+				<animated.div
+					ref={ref}
+					style={springs}
+					className="px-4 py-32 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-40"
+				>
 					<div className="relative max-w-2xl text-center sm:mx-auto sm:max-w-xl md:max-w-2xl ">
-						<animated.h2
-							style={props}
-							className="mb-6 tracking-wide text-md md:text-2xl text-emerald-400 sm:leading-none"
-						>
+						<h2 className="mb-6 tracking-wide text-md md:text-2xl text-emerald-400 sm:leading-none">
 							Hi, my name is
-						</animated.h2>
+						</h2>
 						<h2 className="mb-6 text-4xl font-bold tracking-wide md:text-5xl text-slate-300 lg:text-8xl sm:leading-none">
 							Adrian Leal.
 						</h2>
@@ -51,7 +67,6 @@ const Hero = () => {
 							/>
 							things into reality.
 						</p>
-
 						<p className="max-w-md mx-auto mb-10 text-lg tracking-wide lg:text-3xl text-slate-300 md:mb-16">
 							Stay disciplined. Be yourself. <br />
 							Keep learning.
@@ -89,7 +104,7 @@ const Hero = () => {
 							</a>
 						</div>
 					</div>
-				</div>
+				</animated.div>
 
 				<div class="triangleSVG">
 					<svg

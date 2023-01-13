@@ -1,8 +1,28 @@
 import React from 'react';
+import { useInView, animated } from '@react-spring/web';
 
 const Contact = () => {
+	const [ref, springs] = useInView(
+		() => ({
+			from: {
+				opacity: 0,
+				x: 100,
+			},
+			to: {
+				opacity: 1,
+				x: 0,
+			},
+		}),
+		{
+			rootMargin: '-40% 0%',
+		}
+	);
 	return (
-		<div className="px-4 py-16 m-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+		<animated.div
+			ref={ref}
+			style={springs}
+			className="px-4 py-16 m-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+		>
 			<div className=" bg-slate-900">
 				{/* Start of Grid */}
 				<section className="container grid grid-cols-1 mx-auto border rounded-md md:grid-cols-2">
@@ -132,7 +152,7 @@ const Contact = () => {
 					</div>
 				</section>
 			</div>
-		</div>
+		</animated.div>
 	);
 };
 

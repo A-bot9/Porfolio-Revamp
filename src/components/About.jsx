@@ -1,8 +1,26 @@
 import bitmoji from '../images/bitmoji.jpg';
+import { useInView, animated } from '@react-spring/web';
 
 const About = () => {
+	const [ref, springs] = useInView(
+		() => ({
+			from: {
+				opacity: 0,
+				x: 100,
+			},
+			to: {
+				opacity: 1,
+				x: 0,
+			},
+		}),
+		{
+			rootMargin: '-40% 0%',
+		}
+	);
 	return (
-		<div
+		<animated.div
+			ref={ref}
+			style={springs}
 			name="about"
 			className="px-4 py-32 m-10 mx-auto bg-gray-800 rounded-full sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-40 "
 		>
@@ -39,7 +57,7 @@ const About = () => {
 					</div>
 				</section>
 			</div>
-		</div>
+		</animated.div>
 	);
 };
 
