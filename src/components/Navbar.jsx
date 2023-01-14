@@ -10,10 +10,18 @@ const Navbar = () => {
 	const handleToggle = () => {
 		setNavbarOpen(!navbarOpen);
 	};
+
+	const refreshPage = () => {
+		window.location.reload(true);
+	};
 	return (
 		<nav className="shadow bg-slate-900">
 			<div className="flex items-center justify-between max-w-4xl px-6 py-4 mx-auto md:px-4 md:flex">
-				<img src={logoAL} className="h-10 border-2 rounded-full lg:h-12 border-emerald-400" />
+				<img
+					src={logoAL}
+					className="h-10 border-2 rounded-full cursor-pointer lg:h-12 border-emerald-400"
+					onClick={refreshPage}
+				/>
 				<div>
 					<ul className="hidden md:flex">
 						<li className="px-2 lg:text-xl coolLists">

@@ -1,5 +1,5 @@
-import bitmoji from '../images/bitmoji.jpg';
 import { useInView, animated } from '@react-spring/web';
+import bitmoji from '../images/bitmoji.jpg';
 
 const About = () => {
 	const [ref, springs] = useInView(
@@ -37,7 +37,7 @@ const About = () => {
 							interest in becoming a Frontend Engineer started on January 6, 2022.
 						</p>
 						<p className="mb-8 leading-relaxed text-left text-slate-200 ">
-							Fast forward to December 30, 2022 I have been consisted on learning how to code and
+							Fast forward to January, 14, 2023 I have been consisted on learning to code and
 							have graduated from Nucamp Coding Bootcamp. July 4th-November 26th 2022.
 						</p>
 						<p className="leading-relaxed text-left text-slate-400">

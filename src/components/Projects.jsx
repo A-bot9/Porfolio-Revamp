@@ -1,6 +1,5 @@
 import React from 'react';
 import { useInView, animated } from '@react-spring/web';
-
 import { projects } from '../data/projectsData';
 import { ImFire } from 'react-icons/im';
 

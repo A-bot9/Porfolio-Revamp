@@ -1,11 +1,10 @@
-// import { useState } from 'react';
-import { useInView, animated } from '@react-spring/web';
-
-import Typed from 'react-typed';
-import { FaLinkedinIn, FaCodepen, FaGithub } from 'react-icons/fa';
 import Navbar from './Navbar';
-import Resume from '../assets/Resume.pdf';
+import { useInView, animated } from '@react-spring/web';
+import { FaLinkedinIn, FaCodepen, FaGithub } from 'react-icons/fa';
 import { ScrollToTop } from './scroll/ScrollToTop';
+import Typed from 'react-typed';
+
+import Resume from '../assets/Resume.pdf';
 
 const Hero = () => {
 	// const props = useSpring({
